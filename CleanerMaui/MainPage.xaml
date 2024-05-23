@@ -1,10 +1,67 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="CleanerMaui.MainPage">
+             x:Class="CleanerMaui.MainPage"
+             >
 
-    <ScrollView>
-        
-    </ScrollView>
+    <VerticalStackLayout Padding="0">
+        <!--Barre du header-->
+        <Frame BackgroundColor="#444" HeightRequest="100"
+               CornerRadius="0">
+            <FlexLayout Direction="Row">
+                <Image Source="cleaner.png" WidthRequest="60" Margin="0,0,5,0"/>
+
+                <VerticalStackLayout Margin="0">
+                    <Label Text="PC Cleaner" TextColor="White" FontSize="Title" FontAttributes="Bold"/>
+                    <Label Text="v1.4" TextColor="White"/>
+                </VerticalStackLayout>
+
+                <VerticalStackLayout Margin="20,0,0,0" FlexLayout.Grow="1">
+                    <Label Text="Microsoft Windows X" x:Name="osVersion" TextColor="White"/>
+                    <Label Text="xxxxx" x:Name="hardWare" TextColor="White"/>
+                </VerticalStackLayout>
+                
+
+                <ImageButton Source="info.png" WidthRequest="50" Background="#444" Clicked="InfoButton_Clicked"/>
+
+            </FlexLayout>
+            
+        </Frame>
+
+        <AbsoluteLayout>
+            <!--Menu de gauche-->
+            <Frame AbsoluteLayout.LayoutBounds="0,0,0.075,1"
+                   AbsoluteLayout.LayoutFlags="All"
+                   BackgroundColor="#666"
+                   MinimumHeightRequest="60"
+                   Padding="0" BorderColor="#666" CornerRadius="0">
+                
+            </Frame>
+            <!--Partie centrale-->
+            <VerticalStackLayout AbsoluteLayout.LayoutBounds="1,0,0.925,1" AbsoluteLayout.LayoutFlags="All">
+                <Frame 
+                       BackgroundColor="White"
+                       MinimumHeightRequest="400"
+                       Padding="0" Margin="0" BorderColor="#fff" CornerRadius="0">
+
+                </Frame>
+                
+            </VerticalStackLayout>
+            <!--footer-->
+            <Frame AbsoluteLayout.LayoutBounds="0,400,1,AutoSize"
+                    AbsoluteLayout.LayoutFlags="WidthProportional"
+                    BackgroundColor="#333"
+                    MinimumHeightRequest="60"
+                    BorderColor="#333" CornerRadius="0"
+                   Padding="0" Margin="0">
+
+                <Label Text="PC Cleaner" HorizontalTextAlignment="End" VerticalTextAlignment="Center" TextDecorations="Underline"/>
+            </Frame>
+        </AbsoluteLayout>
+
+
+
+
+    </VerticalStackLayout>
 
 </ContentPage>
