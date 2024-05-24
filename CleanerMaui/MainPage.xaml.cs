@@ -91,13 +91,13 @@ namespace CleanerMaui
 
         private void ButtonNettoyer_Clicked(object sender, EventArgs e) // Gère le clic sur le bouton Nettoyer.
         {
-            if (_checkboxFichiersTemp) // Si la case à cocher Fichiers Temp est cochée...
+            if (_checkboxFichiersTemp) 
             {
-                // Implémenter la logique pour nettoyer les fichiers temporaires ici.
+                ClearWindowsTempFolder();
             }
-            if (_checkboxLogsWindows) // Si la case à cocher Logs Windows est cochée...
+            if (_checkboxLogsWindows) 
             {
-                // Implémenter la logique pour nettoyer les logs Windows ici.
+                
             }
             if (_checkboxFichiersWinUpdate) // Si la case à cocher Fichiers WinUpdate est cochée...
             {
@@ -115,6 +115,66 @@ namespace CleanerMaui
             progression.Progress = 1; // Met à jour la barre de progression à 100%.
 
             tableRecap.IsVisible = true; // Rendre visible le tableau récapitulatif.
+        }
+
+        public void ClearWindowsTempFolder()
+        {
+            string path = @"C:\Windows\Temp";
+            if (Directory.Exists(path)) {
+                detailFichiersTemp.Detail =GetFilesCountInFolder(path) + "Fichiers supprimés .";
+
+                processDirectory(path);
+            }
+        }
+
+        public void processDirectory(string targetDirectory)
+        {
+            try
+            {
+                string[] files = Directory.GetFiles(targetDirectory);
+                foreach (string file in files)
+                {
+                    processFile(file);
+                }
+                string[] subdirectoryEntry = Directory.GetDirectories(targetDirectory);
+                foreach (string sub in subdirectoryEntry)
+                    processDirectory(sub);
+            }
+            catch (Exception ex)
+            {
+
+            }
+            
+        }
+
+        public void processFile(string path)
+        {
+            try
+            {
+                if (path.Contains("\\Temp"))
+                {
+                    File.Delete(path);
+                }
+                
+            }
+            catch
+            {
+            }
+
+        }
+
+        public int GetFilesCountInFolder(string path)
+        {
+            try
+            {
+                int count = Directory.GetFiles(path, "*.*", SearchOption.AllDirectories).Count();
+                return count;
+            }
+
+            catch
+            {
+                return -1;
+            }
         }
 
         public void EmptyRecycleBin() // Méthode pour vider la corbeille.
