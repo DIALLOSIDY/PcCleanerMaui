@@ -1,12 +1,19 @@
-﻿namespace CleanerMaui
+﻿using CleanerMaui.Helper;
+
+namespace CleanerMaui
 {
     public partial class MainPage : ContentPage
     {
         
+        Sysinfo sysinfo =new Sysinfo();
 
         public MainPage()
         {
             InitializeComponent();
+
+            ShowSystemInfo();
+
+
         }
 
         private async void InfoButton_Clicked(object sender, EventArgs e)
@@ -21,6 +28,15 @@
                 Console.WriteLine(ex.Message);
             }
            
+        }
+
+        public void ShowSystemInfo()
+        {
+            // os
+            osVersion.Text = sysinfo.GetWinVer();
+
+            //CPU
+            hardWare.Text =sysinfo.GetHardWareInfos();
         }
     }
 
