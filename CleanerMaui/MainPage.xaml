@@ -4,7 +4,7 @@
              x:Class="CleanerMaui.MainPage"
              >
 
-    <VerticalStackLayout Padding="0">
+    <VerticalStackLayout Padding="0" >
         <!--Barre du header-->
         <Frame BackgroundColor="#444" HeightRequest="100"
                CornerRadius="0">
@@ -20,12 +20,12 @@
                     <Label Text="Microsoft Windows X" x:Name="osVersion" TextColor="White"/>
                     <Label Text="xxxxx" x:Name="hardWare" TextColor="White"/>
                 </VerticalStackLayout>
-                
+
 
                 <ImageButton Source="info.png" WidthRequest="50" Background="#444" Clicked="InfoButton_Clicked"/>
 
             </FlexLayout>
-            
+
         </Frame>
 
         <AbsoluteLayout>
@@ -62,28 +62,109 @@
                     <Label Text="MAJ" FontSize="12" Margin="0,-10,0,10" TextColor="White" HorizontalTextAlignment="Center" FontAttributes="Bold" TextDecorations="Underline"/>
 
                 </VerticalStackLayout>
-                
+
             </Frame>
             <!--Partie centrale-->
-            <VerticalStackLayout AbsoluteLayout.LayoutBounds="1,0,0.925,1" AbsoluteLayout.LayoutFlags="All">
+            
+             <VerticalStackLayout AbsoluteLayout.LayoutBounds="1,0,0.925,1" AbsoluteLayout.LayoutFlags="All">
                 <Frame 
                        BackgroundColor="White"
-                       MinimumHeightRequest="500"
+                       MinimumHeightRequest="400"
                        Padding="0" Margin="0" BorderColor="#fff" CornerRadius="0">
 
-                </Frame>
-                
-            </VerticalStackLayout>
-            <!--footer-->
-            <Frame AbsoluteLayout.LayoutBounds="0,380,1,AutoSize"
-                    AbsoluteLayout.LayoutFlags="WidthProportional"
-                    BackgroundColor="#333"
-                    MinimumHeightRequest="60"
-                    BorderColor="#333" CornerRadius="0"
-                   Padding="0" Margin="0">
+                    <!-- Grille-->
+                    <Grid HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
 
-                <Label Text="PC Cleaner" HorizontalTextAlignment="End" VerticalTextAlignment="Center" TextDecorations="Underline"/>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="auto"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <!-- scroll view des options de nettoyage-->
+                        <ScrollView Background="#ededed" HeightRequest="585" WidthRequest="220">
+                            <StackLayout>
+                                <Label Text="Fichier à nettoyer" FontAttributes="Bold" TextColor="Black"/>
+
+                                <!--checkbox fichier temporaire-->
+                                <StackLayout Orientation="Horizontal">
+                                    <CheckBox IsChecked="True" x:Name="checkboxFichiersTemp"/>
+                                    <Label Text="Fichier Temporaire"  VerticalOptions="Center"/>
+                                </StackLayout>
+
+                                <!--LOgs-->
+                                <StackLayout Orientation="Horizontal">
+                                    <CheckBox IsChecked="True" x:Name="checkboxLogsWindows"/>
+                                    <Label Text="Logs Windows"  VerticalOptions="Center"/>
+                                </StackLayout>
+
+                                <!--checkbox fichier win update-->
+                                <StackLayout Orientation="Horizontal">
+                                    <CheckBox IsChecked="True" x:Name="checkboxFichiersWinUpdate"/>
+                                    <Label Text="Fichier Temporaire"  VerticalOptions="Center"/>
+                                </StackLayout>
+
+                                <!--checkbox Rapport D'erreus-->
+                                <StackLayout Orientation="Horizontal">
+                                    <CheckBox IsChecked="True" x:Name="checkboxRapportErreur"/>
+                                    <Label Text="Rapport D'erreurs"  VerticalOptions="Center"/>
+                                </StackLayout>
+
+
+
+                            </StackLayout>
+                        </ScrollView>
+                        
+                       <!--Rapport de nettoyage-->
+                        <Frame BackgroundColor="White"  Grid.Column="1">
+
+                            <ScrollView>
+                                <StackLayout>
+                                    <Label Text="Nettoyage du disc" FontSize="Large" FontAttributes="Bold"/>
+
+                                    <ProgressBar Progress="0" HeightRequest="10" ScaleY="4" Background="White" ProgressColor="Green" x:Name="progression"/>
+
+                                    <BoxView HeightRequest="1" BackgroundColor="Black" Margin="0,2,0,2"/>
+
+                                    <Label Text=" " FontAttributes="Bold" TextColor="Black" x:Name="totalSize"/>
+                                    
+                                    <!--Tableau recaputilatif-->
+
+                                    <TableView   RowHeight="40" IsVisible="false" x:Name="tableRecap">
+                                        <TableRoot>
+                                            <TableSection Title="____________Rapport detaillé des fichiers supprimés_________" TextColor="Black">
+
+                                                <ImageCell Text="Fichiers Temporaires" x:Name="detailFichiersTemp" DetailColor="#222" TextColor="Black" Detail="Ignoré"/>
+                                                <ImageCell Text="Fichiers Windows Update" x:Name="detailFichiersWindowsUp" DetailColor="#222" TextColor="Black" Detail="Ignoré"/>
+                                                <ImageCell Text="Rapport d'erreurs" x:Name="detailErrors" DetailColor="#222" TextColor="Black" Detail="Ignoré"/>
+                                                <ImageCell Text="Logs Windows" x:Name="detailLogs" DetailColor="#222" TextColor="Black" Detail="Ignoré"/>
+                                                <ImageCell Text="Corbeille Vidée" x:Name="detailCorbeille" DetailColor="#222" TextColor="Black" Detail="Ignoré"/>
+
+
+                                            </TableSection>
+                                        </TableRoot>
+                                    </TableView>
+
+                                    <Button  Text="Nettoyer" Background="DodgerBlue" TextColor="Black" WidthRequest="160" HeightRequest="10"/>
+
+                                </StackLayout>
+
+                            </ScrollView>
+                        </Frame>
+                    </Grid>
+
+                </Frame>
+
+              </VerticalStackLayout>
+             
+                <!--footer-->
+
+            <Frame Background="Red" AbsoluteLayout.LayoutBounds="0,500,1,AutoSize " AbsoluteLayout.LayoutFlags="WidthProportional"
+                   HeightRequest="60" BorderColor="White">
+                <Label Text=" PC Cleaner" HorizontalTextAlignment="End" VerticalTextAlignment="Center" TextDecorations="Underline"/>
+
+
+
             </Frame>
+           
         </AbsoluteLayout>
 
 

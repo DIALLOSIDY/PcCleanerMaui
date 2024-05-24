@@ -38,6 +38,8 @@ namespace CleanerMaui
             //CPU
             hardWare.Text =sysinfo.GetHardWareInfos();
         }
+
+        
     }
 
 }
