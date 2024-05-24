@@ -124,13 +124,20 @@
 
                             <ScrollView>
                                 <StackLayout>
-                                    <Label Text="Nettoyage du disc" FontSize="Large" FontAttributes="Bold"/>
+
+                                    <StackLayout Orientation="Horizontal" Padding="0,0,0,5" Spacing="110">
+                                        <Label Text="Nettoyage du disque dur" FontSize="Large" FontAttributes="Bold"/>
+                                        <Button  Text="Nettoyer" Background="#68F222" TextColor="Black" WidthRequest="160" HeightRequest="10" Clicked="ButtonNettoyer_Clicked"
+                                                 VerticalOptions="Center" HorizontalOptions="End" Margin="0,0,0,0"/>
+
+                                    </StackLayout>
+                                    
 
                                     <ProgressBar Progress="0" HeightRequest="10" ScaleY="4" Background="White" ProgressColor="Green" x:Name="progression"/>
 
                                     <BoxView HeightRequest="1" BackgroundColor="Black" Margin="0,2,0,2"/>
 
-                                    <Label Text=" " FontAttributes="Bold" TextColor="Black" x:Name="totalSize"/>
+                                    <Label Text=" " FontAttributes="Bold" TextColor="#22A3F2" x:Name="totalSize"/>
                                     
                                     <!--Tableau recaputilatif-->
 
@@ -149,7 +156,6 @@
                                         </TableRoot>
                                     </TableView>
 
-                                    <Button  Text="Nettoyer" Background="DodgerBlue" TextColor="Black" WidthRequest="160" HeightRequest="10" Clicked="ButtonNettoyer_Clicked"/>
 
                                 </StackLayout>
 
