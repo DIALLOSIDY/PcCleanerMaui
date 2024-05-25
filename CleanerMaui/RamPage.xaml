@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:pr="clr-namespace:MPowerKit.ProgressRing;assembly=MPowerKit.ProgressRing"
              x:Class="CleanerMaui.RamPage"
              Title="RamPage">
     <VerticalStackLayout>
@@ -86,6 +87,41 @@ CornerRadius="0">
                                     <Label Text="RAM " FontAttributes="Bold" TextColor="Black" FontSize="Title" />
 
                                     <BoxView HeightRequest="1" BackgroundColor="Black" Margin="0,2,0,2"/>
+
+                                    <Label Text="Utilisation de la RAM" FontSize="Medium" FontAttributes="Bold" HorizontalTextAlignment="Center"/>
+
+                                    <Grid HorizontalOptions="FillAndExpand">
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="*"/>
+                                            <ColumnDefinition Width="*"/>
+                                        </Grid.ColumnDefinitions>
+                                        
+                                        <!--CREATION DE L4ANNEAU DE PROGRESSION GRACE A la bibliotheque ProgressRing que j'ai telechargé-->
+                                        <pr:ProgressRing
+                                            x:Name="graph" HeightRequest="200"
+                                            Progress="0" IsIndeterminate="False"
+                                            Smooth="true" WidthRequest="200"
+                                            StrokeLineCap="Square"
+                                            Color="DodgerBlue"
+                                            Thickness="20"/>
+
+                                        <Label x:Name="rameUserTxt" Text="% " Margin="0,80,0,0" TextColor="Black" HorizontalTextAlignment="Center" FontSize="25"/>
+
+                                        <TableView Grid.Column="1" Margin="0,-10,0,0" RowHeight="45">
+                                            <TableRoot>
+                                                <TableSection>
+                                                    <TextCell Text="Capacite totale" Detail="x MB" x:Name="cellTotal"/>
+                                                    <TextCell Text="RAM Utilisée" Detail="x MB" x:Name="cellUsed"/>
+                                                    <TextCell Text="RAM libre" Detail="x MB" x:Name="cellFree"/>
+                                                </TableSection>
+                                            </TableRoot>
+                                            
+                                        </TableView>
+                                    </Grid>
+
+                                    <Button  Text="Nettoyer" Background="#68F222" TextColor="Black" WidthRequest="160" HeightRequest="10" Clicked="ButtonRam_Clicked"/>
+
+                                    <Label Text=" RAM Optimisée" HorizontalTextAlignment="Center" x:Name="ramCleaned" IsVisible="False"/>
 
                                 </StackLayout>
 
