@@ -389,5 +389,22 @@ namespace CleanerMaui
             detailFichiersWindowsUp.Detail = " ignoré";
             detailLogs.Detail = "ignoré ";
         }
+
+        private  async void ImageButtonOptions_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new OptionsPage());
+        }
+
+        private async void ImageButtonRam_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new RamPage());
+
+        }
+
+        private async void ImageButtonOutils_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new ToolsPage());
+
+        }
     }
 }

@@ -37,29 +37,29 @@
                    Padding="0" BorderColor="#666" CornerRadius="0">
                 <VerticalStackLayout Spacing="7" HorizontalOptions="Center">
                     <!--Page nettoyage-->
-                    <ImageButton Source="cleaner.png" WidthRequest="20" BackgroundColor="#666" CornerRadius="0" Margin="0,1,0,0">
+                    <ImageButton Source="nettoyer.png" WidthRequest="20" BackgroundColor="#666" CornerRadius="0" Margin="0,1,0,0">
                     </ImageButton>
                     <Label Text="nettoyage" FontSize="12" Margin="0,-10,0,10" TextColor="White" HorizontalTextAlignment="Center" FontAttributes="Bold" TextDecorations="Underline"/>
 
                     <!--Page Ram-->
-                    <ImageButton Source="cleaner.png" WidthRequest="20" BackgroundColor="#666" CornerRadius="0" Margin="0,1,0,0">
+                    <ImageButton Source="ram.png" WidthRequest="20" BackgroundColor="#666" CornerRadius="0" Margin="0,1,0,0" Clicked="ImageButtonRam_Clicked">
                     </ImageButton>
-                    <Label Text="RAM" FontSize="12" Margin="0,-10,0,10" TextColor="White" HorizontalTextAlignment="Center" FontAttributes="Bold" TextDecorations="Underline"/>
+                    <Label Text="RAM" FontSize="12" Margin="0,-10,0,10" TextColor="White" HorizontalTextAlignment="Center" FontAttributes="Bold" />
 
                     <!--Page Outils-->
-                    <ImageButton Source="cleaner.png" WidthRequest="20" BackgroundColor="#666" CornerRadius="0" Margin="0,1,0,0">
+                    <ImageButton Source="tools.png" WidthRequest="20" BackgroundColor="#666" CornerRadius="0" Margin="0,1,0,0" Clicked="ImageButtonOutils_Clicked">
                     </ImageButton>
-                    <Label Text="Outils" FontSize="12" Margin="0,-10,0,10" TextColor="White" HorizontalTextAlignment="Center" FontAttributes="Bold" TextDecorations="Underline"/>
+                    <Label Text="Outils" FontSize="12" Margin="0,-10,0,10" TextColor="White" HorizontalTextAlignment="Center" FontAttributes="Bold"/>
 
                     <!--Page Options-->
-                    <ImageButton Source="cleaner.png" WidthRequest="20" BackgroundColor="#666" CornerRadius="0" Margin="0,1,0,0">
+                    <ImageButton Source="options.png" WidthRequest="20" BackgroundColor="#666" CornerRadius="0" Margin="0,1,0,0" Clicked="ImageButtonOptions_Clicked">
                     </ImageButton>
-                    <Label Text="Options" FontSize="12" Margin="0,-10,0,10" TextColor="White" HorizontalTextAlignment="Center" FontAttributes="Bold" TextDecorations="Underline"/>
+                    <Label Text="Options" FontSize="12" Margin="0,-10,0,10" TextColor="White" HorizontalTextAlignment="Center" FontAttributes="Bold"/>
 
                     <!--Page mise a j-->
-                    <ImageButton Source="cleaner.png" WidthRequest="20" BackgroundColor="#666" CornerRadius="0" Margin="0,1,0,0">
+                    <ImageButton Source="maj.png" WidthRequest="20" BackgroundColor="#666" CornerRadius="0" Margin="0,1,0,0">
                     </ImageButton>
-                    <Label Text="MAJ" FontSize="12" Margin="0,-10,0,10" TextColor="White" HorizontalTextAlignment="Center" FontAttributes="Bold" TextDecorations="Underline"/>
+                    <Label Text="MAJ" FontSize="12" Margin="0,-10,0,10" TextColor="White" HorizontalTextAlignment="Center" FontAttributes="Bold" />
 
                 </VerticalStackLayout>
 

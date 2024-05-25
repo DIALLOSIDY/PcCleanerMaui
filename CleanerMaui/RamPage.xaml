@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CleanerMaui.RamPage"
+             Title="RamPage">
+    <VerticalStackLayout>
+        <Frame BackgroundColor="#444" HeightRequest="100"
+CornerRadius="0">
+            <FlexLayout Direction="Row">
+                <Image Source="cleaner.png" WidthRequest="60" Margin="0,0,5,0"/>
+
+                <VerticalStackLayout Margin="0">
+                    <Label Text="PC Cleaner" TextColor="White" FontSize="Title" FontAttributes="Bold"/>
+                    <Label Text="v1.4" TextColor="White"/>
+                </VerticalStackLayout>
+
+                <VerticalStackLayout Margin="20,0,0,0" FlexLayout.Grow="1">
+                    <Label Text="Microsoft Windows X" x:Name="osVersion" TextColor="White"/>
+                    <Label Text="xxxxx" x:Name="hardWare" TextColor="White"/>
+                </VerticalStackLayout>
+
+
+                <ImageButton Source="info.png" WidthRequest="50" Background="#444" />
+
+            </FlexLayout>
+
+        </Frame>
+
+        <AbsoluteLayout>
+            <!--Menu de gauche-->
+            <Frame AbsoluteLayout.LayoutBounds="0,0,0.075,1"
+             AbsoluteLayout.LayoutFlags="All"
+             BackgroundColor="#666"
+             MinimumHeightRequest="60"
+             Padding="0" BorderColor="#666" CornerRadius="0">
+                <VerticalStackLayout Spacing="7" HorizontalOptions="Center">
+                    <!--Page nettoyage-->
+                    <ImageButton Source="nettoyer.png" WidthRequest="20" BackgroundColor="#666" CornerRadius="0" Margin="0,1,0,0" Clicked="ImageButtonNettoyage_Clicked">
+                    </ImageButton>
+                    <Label Text="nettoyage" FontSize="12" Margin="0,-10,0,10" TextColor="White" HorizontalTextAlignment="Center" FontAttributes="Bold" />
+
+                    <!--Page Ram-->
+                    <ImageButton Source="ram.png" WidthRequest="20" BackgroundColor="#666" CornerRadius="0" Margin="0,1,0,0">
+                    </ImageButton>
+                    <Label Text="RAM" FontSize="12" Margin="0,-10,0,10" TextColor="White" HorizontalTextAlignment="Center" FontAttributes="Bold" TextDecorations="Underline"/>
+
+                    <!--Page Outils-->
+                    <ImageButton Source="tools.png" WidthRequest="20" BackgroundColor="#666" CornerRadius="0" Margin="0,1,0,0" Clicked="ImageButtonTools_Clicked">
+                    </ImageButton>
+                    <Label Text="Outils" FontSize="12" Margin="0,-10,0,10" TextColor="White" HorizontalTextAlignment="Center" FontAttributes="Bold" />
+
+                    <!--Page Options-->
+                    <ImageButton Source="options.png" WidthRequest="20" BackgroundColor="#666" CornerRadius="0" Margin="0,1,0,0" Clicked="ImageButtonOptions_Clicked">
+                    </ImageButton>
+                    <Label Text="Options" FontSize="12" Margin="0,-10,0,10" TextColor="White" HorizontalTextAlignment="Center" FontAttributes="Bold" />
+
+                    <!--Page mise a j-->
+                    <ImageButton Source="maj.png" WidthRequest="20" BackgroundColor="#666" CornerRadius="0" Margin="0,1,0,0">
+                    </ImageButton>
+                    <Label Text="MAJ" FontSize="12" Margin="0,-10,0,10" TextColor="White" HorizontalTextAlignment="Center" FontAttributes="Bold" />
+
+                </VerticalStackLayout>
+
+            </Frame>
+            <!--Partie centrale-->
+
+            <VerticalStackLayout AbsoluteLayout.LayoutBounds="1,0,0.925,1" AbsoluteLayout.LayoutFlags="All">
+                <Frame 
+                     BackgroundColor="White"
+                     MinimumHeightRequest="400"
+                     Padding="0" Margin="0" BorderColor="#fff" CornerRadius="0">
+
+                    <!-- Grille-->
+                    <Grid HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+
+
+                        <!--Contenu de la page-->
+                        <Frame BackgroundColor="White"  >
+
+                            <ScrollView>
+                                <StackLayout>
+                                    <Label Text="RAM " FontAttributes="Bold" TextColor="Black" FontSize="Title" />
+
+                                    <BoxView HeightRequest="1" BackgroundColor="Black" Margin="0,2,0,2"/>
+
+                                </StackLayout>
+
+                            </ScrollView>
+                        </Frame>
+                    </Grid>
+
+                </Frame>
+
+            </VerticalStackLayout>
+
+            <!--footer-->
+
+            <Frame Background="Red" AbsoluteLayout.LayoutBounds="0,500,1,AutoSize " AbsoluteLayout.LayoutFlags="WidthProportional"
+                   HeightRequest="60" BorderColor="White">
+                <Label Text=" PC Cleaner" HorizontalTextAlignment="End" VerticalTextAlignment="Center" TextDecorations="Underline"/>
+
+
+
+            </Frame>
+
+        </AbsoluteLayout>
+
+    </VerticalStackLayout>
+</ContentPage>
