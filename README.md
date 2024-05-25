@@ -26,13 +26,13 @@ Utilisation
 Page principale
 La page principale de l'application offre des options pour nettoyer différents types de fichiers. Vous pouvez sélectionner les catégories que vous souhaitez nettoyer en cochant les cases correspondantes.
 
- ![Captures d'écran](CleanerMaui/Resources/Images/nettoyer.png)
+ ![Captures d'écran](CleanerMaui/Resources/Images/nettoyagecapt.png)
 
 
 Page RAM
 La page d'optimisation de la RAM affiche les informations système et les statistiques d'utilisation de la RAM. Cliquez sur le bouton "Optimiser la RAM" pour libérer la RAM inutilisée et améliorer les performances du système.
 
- ![Captures d'écran](CleanerMaui/Resources/Images/nettoyer.png)
+ ![Captures d'écran](CleanerMaui/Resources/Images/ramcapt.png)
 
 Aperçu du code:
         MainPage.xaml.cs
