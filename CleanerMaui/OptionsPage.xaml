@@ -101,12 +101,13 @@
 
             <!--footer-->
 
-            <Frame Background="Red" AbsoluteLayout.LayoutBounds="0,500,1,AutoSize " AbsoluteLayout.LayoutFlags="WidthProportional"
-            HeightRequest="60" BorderColor="White">
-                <Label Text=" PC Cleaner" HorizontalTextAlignment="End" VerticalTextAlignment="Center" TextDecorations="Underline"/>
+            <Frame Background="#E2E9EC" AbsoluteLayout.LayoutBounds="0,500,1,AutoSize" AbsoluteLayout.LayoutFlags="WidthProportional"
+                 HeightRequest="60" BorderColor="White">
+                <StackLayout Orientation="Horizontal" Spacing="600">
+                    <Label Text="© 2024 Diallo Sidy" FontAttributes="Bold" HorizontalTextAlignment="Start" VerticalTextAlignment="Center"/>
+                    <Label Text="PC Cleaner" HorizontalTextAlignment="End" VerticalTextAlignment="Center" HorizontalOptions="End" TextDecorations="Underline"/>
 
-
-
+                </StackLayout>
             </Frame>
 
         </AbsoluteLayout>

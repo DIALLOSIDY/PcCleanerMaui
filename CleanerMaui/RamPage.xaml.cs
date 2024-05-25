@@ -82,6 +82,27 @@ public partial class RamPage : ContentPage
 
     private void ButtonRam_Clicked(object sender, EventArgs e)
     {
+        graph.IsIndeterminate = true; //pour creer une petite annimation de l'anneau quand on appuie sur le button Optimiser
+        OptimizeRam();
+    }
+
+    public async void OptimizeRam()
+    {
+
+        try
+        {
+            GC.Collect(1,GCCollectionMode.Forced);
+            GC.WaitForPendingFinalizers();
+
+        }
+        catch (Exception ex)
+        {
+            throw;
+        }
+
+        await Task.Delay(TimeSpan.FromSeconds(2)); // on met juste le programme en pause pour 2s pour voir l'effet de l'annimation de l'anneau 
+        graph.IsIndeterminate = false; // on arrete l'annimation 
         ramCleaned.IsVisible = true;
+        GetRamUsage(); // On reaffiche les informations de la RAM
     }
 }

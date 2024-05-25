@@ -119,9 +119,9 @@ CornerRadius="0">
                                         </TableView>
                                     </Grid>
 
-                                    <Button  Text="Nettoyer" Background="#68F222" TextColor="Black" WidthRequest="160" HeightRequest="10" Clicked="ButtonRam_Clicked"/>
+                                    <Button  Text="Optimiser La RAM" Background="#68F222" TextColor="Black" WidthRequest="300" HeightRequest="10" Clicked="ButtonRam_Clicked"/>
 
-                                    <Label Text=" RAM Optimisée" HorizontalTextAlignment="Center" x:Name="ramCleaned" IsVisible="False"/>
+                                    <Label Text=" RAM Optimisée" HorizontalTextAlignment="Center" Margin="0,0,0,5" x:Name="ramCleaned" IsVisible="False" TextColor="#68F222"/>
 
                                 </StackLayout>
 
@@ -135,12 +135,13 @@ CornerRadius="0">
 
             <!--footer-->
 
-            <Frame Background="Red" AbsoluteLayout.LayoutBounds="0,500,1,AutoSize " AbsoluteLayout.LayoutFlags="WidthProportional"
-                   HeightRequest="60" BorderColor="White">
-                <Label Text=" PC Cleaner" HorizontalTextAlignment="End" VerticalTextAlignment="Center" TextDecorations="Underline"/>
+            <Frame Background="#E2E9EC" AbsoluteLayout.LayoutBounds="0,500,1,AutoSize" AbsoluteLayout.LayoutFlags="WidthProportional"
+                    HeightRequest="60" BorderColor="White">
+                <StackLayout Orientation="Horizontal" Spacing="600">
+                    <Label Text="© 2024 Diallo Sidy" FontAttributes="Bold" HorizontalTextAlignment="Start" VerticalTextAlignment="Center"/>
+                    <Label Text="PC Cleaner" HorizontalTextAlignment="End" VerticalTextAlignment="Center" HorizontalOptions="End" TextDecorations="Underline"/>
 
-
-
+                </StackLayout>
             </Frame>
 
         </AbsoluteLayout>
