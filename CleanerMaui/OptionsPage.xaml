@@ -86,8 +86,41 @@
                             <ScrollView>
                                 <StackLayout>
                                     <Label Text="Options " FontAttributes="Bold" TextColor="Black" FontSize="Title" />
-
                                     <BoxView HeightRequest="1" BackgroundColor="Black" Margin="0,2,0,2"/>
+                                      <!--Site web-->
+                                    <Label Text="Site Web" TextColor="Black" FontAttributes="Bold"/>
+                                    <Label Text=" Site Web PC Cleaner" TextColor="DodgerBlue" TextDecorations="Underline">
+                                        <Label.GestureRecognizers>
+                                            <TapGestureRecognizer Command="{Binding TapCommand}"
+                                                                  CommandParameter="https://pcCleaner.com"/>
+                                        </Label.GestureRecognizers>
+                                        
+                                    </Label>
+                                    
+                                       <!--Reseaux Sociaux -->
+                                    <Label Text="Reseaux Sociaux" TextColor="Black" FontAttributes="Bold"/>
+                                    <Label Text=" Github" TextColor="DodgerBlue" TextDecorations="Underline">
+                                        <Label.GestureRecognizers>
+                                            <TapGestureRecognizer Command="{Binding TapCommand}"
+                                                                  CommandParameter="https://github.com/DIALLOSIDY/PcCleanerMaui"/>
+                                        </Label.GestureRecognizers>
+
+                                    </Label>
+                                    <Label Text=" Portfolio" TextColor="DodgerBlue" TextDecorations="Underline">
+                                        <Label.GestureRecognizers>
+                                            <TapGestureRecognizer Command="{Binding TapCommand}"
+                                                                  CommandParameter="https://diallosidy.github.io/Portfolio2.0"/>
+                                        </Label.GestureRecognizers>
+
+                                    </Label>
+                                    
+                                    <!--Parametres-->
+
+                                    <Label Text="Reglages " Margin="0,10,0,0" FontAttributes="Bold"/>
+
+                                    
+
+
 
                                 </StackLayout>
 

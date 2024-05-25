@@ -86,31 +86,31 @@
 
                                 <!--checkbox fichier temporaire-->
                                 <StackLayout Orientation="Horizontal">
-                                    <CheckBox IsChecked="True" x:Name="checkboxFichiersTemp" CheckedChanged="checkboxFichiersTemp_CheckedChanged"/>
+                                    <CheckBox Color="DodgerBlue" IsChecked="True" x:Name="checkboxFichiersTemp" CheckedChanged="checkboxFichiersTemp_CheckedChanged"/>
                                     <Label Text="Fichier Temporaire"  VerticalOptions="Center"/>
                                 </StackLayout>
 
                                 <!--LOgs-->
                                 <StackLayout Orientation="Horizontal">
-                                    <CheckBox IsChecked="True" x:Name="checkboxLogsWindows" CheckedChanged="checkboxLogsWindows_CheckedChanged"/>
+                                    <CheckBox Color="DodgerBlue" IsChecked="True" x:Name="checkboxLogsWindows" CheckedChanged="checkboxLogsWindows_CheckedChanged"/>
                                     <Label Text="Logs Windows"  VerticalOptions="Center"/>
                                 </StackLayout>
 
                                 <!--checkbox fichier win update-->
-                                <StackLayout Orientation="Horizontal">
-                                    <CheckBox IsChecked="True" x:Name="checkboxFichiersWinUpdate" CheckedChanged="checkboxFichiersWinUpdate_CheckedChanged"/>
+                                <StackLayout  Orientation="Horizontal">
+                                    <CheckBox Color="DodgerBlue" IsChecked="True" x:Name="checkboxFichiersWinUpdate" CheckedChanged="checkboxFichiersWinUpdate_CheckedChanged"/>
                                     <Label Text="Windows Update"  VerticalOptions="Center"/>
                                 </StackLayout>
 
                                 <!--checkbox Rapport D'erreus-->
                                 <StackLayout Orientation="Horizontal">
-                                    <CheckBox IsChecked="True" x:Name="checkboxRapportErreur" CheckedChanged="checkboxRapportErreur_CheckedChanged"/>
+                                    <CheckBox Color="DodgerBlue" IsChecked="True" x:Name="checkboxRapportErreur" CheckedChanged="checkboxRapportErreur_CheckedChanged"/>
                                     <Label Text="Rapport D'erreurs"  VerticalOptions="Center"/>
                                 </StackLayout>
 
                                 <!--checkbox corbeille-->
-                                <StackLayout Orientation="Horizontal">
-                                    <CheckBox IsChecked="True" x:Name="checkboxCorbeille" CheckedChanged="checkboxCorbeille_CheckedChanged"/>
+                                <StackLayout  Orientation="Horizontal">
+                                    <CheckBox Color="DodgerBlue" IsChecked="True" x:Name="checkboxCorbeille" CheckedChanged="checkboxCorbeille_CheckedChanged"/>
                                     <Label Text="Corbeille"  VerticalOptions="Center"/>
                                 </StackLayout>
 

@@ -87,8 +87,9 @@
                                     <BoxView HeightRequest="1" BackgroundColor="Black" Margin="0,2,0,2"/>
 
                                     <Label Text="Point de restauration" FontSize="Medium"/>
-                                    <Label Text="Creer un Point de restauration" FontSize="Medium"/>
-                                    <Button Text="" TextColor="Black" x:Name="restaurerTxt"/>
+                                    <Label Text="Creer un Point de restauration Pour pouvoir recuperer le systeme en cas de besoin" />
+                                    <Button  Background="#68F222" Text="Creer un poit de Restauration" TextColor="Black" />
+                                    <Label Text=" Fonctionnalité en Maintenance " x:Name="restaurerTxt" Margin="0,10,0,0" HorizontalTextAlignment="Center" TextColor="red"/>
 
 
                                 </StackLayout>

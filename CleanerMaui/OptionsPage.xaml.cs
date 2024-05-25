@@ -1,15 +1,18 @@
 using CleanerMaui.Helper;
-
+using System.Windows.Input;
 namespace CleanerMaui;
 
 public partial class OptionsPage : ContentPage
 {
     Sysinfo sysinfo = new Sysinfo(); // Crée une instance de la classe Sysinfo pour obtenir des informations système.
 
+    public ICommand TapCommand =>new Command <string> (async(url)=>await Launcher.OpenAsync(url));
+
     public OptionsPage()
 	{
 		InitializeComponent();
         ShowSystemInfo();
+        BindingContext =this;
 	}
 
     /**
